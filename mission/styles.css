@@ -1,0 +1,58 @@
+/*
+    content
+*/
+.content {
+    max-width: 600px;
+    font-family: "Times New Roman";
+    padding: 50px 150px;
+    margin: 50px auto;
+    border: 1px solid #ababab;
+}
+
+/*
+    header
+*/
+header {
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 0.5px solid #ababab;
+    padding: 0px;
+}
+
+header h1 {
+    font-size: 42px;
+}
+
+header h2 {
+    color: #006EB6;
+    font-weight: normal;
+    margin: 0px;
+    font-size: 20px;
+}
+
+/*
+    main
+*/
+main {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 50px;
+}
+
+.action-list li {
+    margin-bottom: 20px;
+}
+
+/*
+    footer
+*/
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+}
