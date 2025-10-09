@@ -24,6 +24,20 @@ header, footer {
     color: var(--text-light);
 }
 
+.hide {
+    display: none;
+}
+
+/*
+    Dialog
+*/
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+}
+
 /*
     Header
 */
@@ -101,9 +115,36 @@ footer p {
 /*
     Media
 */
+@media screen and (max-width: 699px) {
+    dialog img {
+        width: 90%;
+        margin: 20vh auto;
+    }
+
+    dialog .closeViewer {
+        position: absolute;
+        margin-top: 20vh;
+    }
+}
+
 @media screen and (min-width: 700px) { 
     .gallery {
         grid-template-columns: 0.5fr 0.5fr;
+    }
+
+    dialog img {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    dialog .closeViewer {
+        position: absolute;
+        top: 25%;
+        left: 75%;
+        transform: translate(-25%, -75%);
     }
 }
 
