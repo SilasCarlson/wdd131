@@ -45,7 +45,7 @@ function galleryOnClick(event) {
 
     // Update the dialog
     const modal = document.getElementById("imageViewer");
-    modal.innerHTML = viewerTemplate(largeImageSource, event.target.altText);
+    modal.innerHTML = viewerTemplate(largeImageSource, event.target.alt);
 
     // Also for this function, don't forget to add the modal to the screen with the .showModal();
     modal.showModal();
