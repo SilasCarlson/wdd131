@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mooli&display=swap');
+
+:root {
+    --gold-color: #EFC69B;
+    --red-color: #AF1B3F;
+    --dark-color: #473144;
+    --body-font: Helvetica, Arial, sans-serif;
+    --headline-font: Lora, Impact, serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--headline-font);
+}
+
+a {
+    color: var(--red-color);
+    text-decoration: none;
+}
+
+p {
+    font-family: var(--body-font);
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    margin: 0;
+    border: 2px solid var(--gold-color);
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: end;
+    justify-items: end;
+    list-style: none;
+    margin-right: 100px;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.review {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding-bottom: 5em;
+}
+
+.review h2 {
+    color: var(--red-color);
+}
+
+.reviewDate {
+    font-size: 20px;
+}
+
+.skipToContent a {
+    position: absolute;
+    top: -40px;
+}
+
+.skipToContent a:focus {
+    top: 0px;
+}
