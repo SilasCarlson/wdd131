@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5 {
 a {
     color: var(--red-color);
     text-decoration: none;
+    font-family: var(--body-font);
 }
 
 p {
@@ -52,15 +53,35 @@ nav a {
 
 main {
     width: 80%;
-    margin: auto;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 4fr 1fr;
+}
+
+.review-container {
+    display: grid;
+    row-gap: 1em;
 }
 
 .review {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    padding-bottom: 5em;
+    column-gap: 5%;
+}
+
+.review-title {
+    margin-top: 1.1em;
+}
+
+.review-details {
+    line-height: 0.6em; /* default is 1.2em; */
+    text-align: right;
+    border-right: 1px solid var(--gold-color);
+    padding: 20px;
+}
+
+.review-book-image {
+    text-align: center;
 }
 
 .review h2 {
@@ -78,4 +99,8 @@ main {
 
 .skip-to-content a:focus {
     top: 0px;
+}
+
+.filter-container {
+    border: 2px solid var(--gold-color);
 }
