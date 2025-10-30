@@ -1,0 +1,118 @@
+/*
+    this fixes the issue of the inputs extending into the gaps of the grid when using width: 100%
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+    Form
+*/
+form {
+    display: grid;
+    grid-template-columns: 80px 235px 80px;
+    grid-template-rows: 20px 180px 20px 40px;
+    grid-gap: 15px;
+}
+
+.card-front, .card-back {
+    /*
+        grid properties
+    */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    align-items: center;
+
+    /*
+        style properties
+    */
+    background-color: #dddddd;
+    width: 330px;
+    height: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0px 2px 8px #888888;
+}
+
+.submit-button {
+    grid-column: 3 / 3;
+    grid-row: 4 / 4;
+    border-radius: 5px;
+}
+
+/*
+    Card Front
+*/
+.card-front {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 1;
+}
+
+.payment-amount {
+    display: grid;
+    align-items: center;
+}
+
+.card-image {
+    display: grid;
+    align-items: center;
+    justify-items: end;
+}
+
+.card-number-input {
+    grid-column-end: span 2;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+}
+
+label {
+    display: block;
+}
+
+.card-expiration-input-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.date-input {
+    width: 100%;
+}
+
+/*
+    Card Back
+*/
+.card-back {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    grid-gap: 0px;
+    padding: 20px 0px;
+    grid-template-rows: 1fr 3fr;
+}
+
+.card-stripe {
+    background-color: #485252;
+    height: 100%;
+    grid-column-end: span 2;
+}
+
+.card-token-input {
+    display: grid;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 1fr;
+}
+
+#card-token {
+    width: 60%;
+}
