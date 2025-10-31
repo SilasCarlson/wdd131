@@ -115,6 +115,10 @@ label {
     grid-row: 2 / 2;
 }
 
+.card-token-input input {
+    width: 75%;
+}
+
 #card-token {
     width: 60%;
 }
