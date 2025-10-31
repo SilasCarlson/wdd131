@@ -26,22 +26,22 @@
 
                 <div class="card-number-input">
                     <label for="card-number">CARD NUMBER</label>
-                    <input type="text" id="card-number" pattern="[0-9]{16}"  
+                    <input type="text" name="cardNumber" pattern="[0-9]{16}"  
                         placeholder="1234 5678 9101 1020" required>
                 </div>
 
                 <div class="card-holder-input">
                     <label for="card-holder">CARD HOLDER</label>
-                    <input type="text" id="card-holder" placeholder="John Doe" required>
+                    <input type="text" name="cardHolder" placeholder="John Doe" required>
                 </div>
 
                 <div>
                     <span>EXPIRATION</span>
 
                     <div class="card-expiration-input-container">
-                        <input type="text" id="expiration-month" placeholder="MM" pattern="[0-9]{2}" 
+                        <input type="text" name="expirationMonth" placeholder="MM" pattern="[0-9]{2}" 
                             class="date-input" required>
-                        <input type="text" id="expiration-year" placeholder="YY" pattern="[0-9]{2}" 
+                        <input type="text" name="expirationYear" placeholder="YY" pattern="[0-9]{2}" 
                             class="date-input" required>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
 
                 <div class="card-token-input">
                     <label for="card-token">CVC/CVV</label>
-                    <input type="text" id="card-token" placeholder="XXX" pattern="[0-9]{3}" required>
+                    <input type="text" name="cardToken" placeholder="XXX" pattern="[0-9]{3}" required>
                 </div>
             </div>
 
