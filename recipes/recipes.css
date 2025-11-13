@@ -1,0 +1,178 @@
+/*
+    Imports
+*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Mooli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Mooli&family=Patrick+Hand&display=swap');
+
+/*
+    Variables & Base styles
+*/
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --link-color: #1674aa;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Mooli", sans-serif;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font);
+}
+
+p {
+    font-family: var(--primary-font);
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+}
+
+/*
+    Header
+*/
+header {
+    border-bottom: 1px solid darkgray;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > img {
+    width: 96px;
+    height: 96px;
+}
+
+.recipe-search-form {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 1em;
+}
+
+#recipe-name-input {
+    flex-grow: 1;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 1.5em;
+    width: 100%;
+    font-family: var(--primary-font);
+}
+
+#search-recipe {
+    border-radius: 0px 5px 5px 0px;
+    background-color: transparent;
+}
+
+#search-recipe img {
+    width: 1.5em;
+    height:  auto;
+}
+
+/*
+    Main
+*/
+.recipe {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.tag {
+    padding: 10px;
+    margin-top: 0.5em;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.recipe-image {
+    width: 100%;
+}
+
+.recipe-name {
+    margin: 0px;
+    color: var(--primary-color);
+}
+
+.recipe-description {
+    display: none;
+}
+
+/*
+    Footer
+*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.social img {
+    width: 64px;
+    height: 64px;
+}
+
+.attribution {
+    font-size: 0.6em;
+    text-decoration: none;
+    font-family: var(--primary-font);
+    color: var(--link-color);
+    text-align: center;
+    margin-top: 1em;
+}
+
+/*
+    Media Queries (Resopnsiveness) 
+*/
+@media screen and (min-width: 600px) {
+    .recipe {
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .recipe-image {
+        max-width: 262px;
+    }
+
+    .recipe-description {
+        display: block;
+    }
+
+    footer {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .attribution { 
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 960px) {
+   .recipe-image {
+        max-width: 500px;
+   }
+}
