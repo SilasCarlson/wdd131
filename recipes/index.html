@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A collection of recipe books" />
         <meta name="author" content="Silas Carlson" />
-        <title>Apple Crisp - RecipeBook</title>
+        <title>RecipeBook</title>
 
         <!--
             CSS, Favicon, JS
@@ -34,7 +34,7 @@
                 <img src="images/recipe-book.png" alt="logo">
                 <h1>RecipeBook</h1>
             </div>
-            <form class="recipe-search-form">
+            <form class="recipe-search-form" id="recipe-search">
                 <input type="text" id="recipe-name-input" name="recipeName" 
                     placeholder="Find a recipe" required>
                 <button type="submit" id="search-recipe">
@@ -43,7 +43,7 @@
             </form>
         </header>
 
-        <main>
+        <main id="recipe-container">
             <section class="recipe">
                 <img class="recipe-image" src="images/apple-crisp.jpg" alt="apple crisp">
                 <div class="recipe-content">
@@ -55,7 +55,7 @@
                         <span aria-hidden="true" class="icon-star">⭐</span>
                         <span aria-hidden="true" class="icon-star">⭐</span>
                         <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
                         <span aria-hidden="true" class="icon-star-empty">☆</span>
                     </span>
                     <p class="recipe-description">This apple crisp recipe is a simple yet delicious 
