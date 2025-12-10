@@ -1,5 +1,8 @@
 import recipes from "./recipes.mjs";
 
+/*
+    Templating Functions
+*/
 function getCategoriesTemplate(categories) {
     let template = ``;
     categories.forEach((category, index) => {
@@ -18,14 +21,14 @@ function getFeaturedRecipeTemplate(recipe) {
                 <p>${getCategoriesTemplate(recipe.categories)}</p>
                 <h3>${recipe.name}</h3>
                 <p>${recipe.review}</p>
-                <a href="recipes.html?id=${recipe.id}">Read more</a>
+                <a href="recipes.html?id=${recipe.id}">Read more about ${recipe.name}</a>
             </div>
         </article>
     `;
 }
 
-// Select 3 random recipes
-const randomRecipes = [ recipes[0], recipes[1], recipes[2], recipes[2] ];
+// Select 4 recipes
+const randomRecipes = [ recipes[0], recipes[1], recipes[2], recipes[3] ];
 
 // Add the featured recipes
 const recipeContainer = document.querySelector(".recipe-preview-container");
@@ -34,6 +37,6 @@ randomRecipes.forEach((recipe) => {
 });
 
 // Event Listeners
-document.getElementById("#our-mission-call-to-action").addEventListener("click", () => {
+document.getElementById("our-mission-call-to-action").addEventListener("click", () => {
     window.location.href = "recipes.html";
 });

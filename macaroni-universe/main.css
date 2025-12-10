@@ -57,6 +57,33 @@ nav li.link:hover {
     background-color: var(--primary-color);
 }
 
+nav #toggle-navigation {
+    display: none;
+}
+
+@media only screen and (max-width: 599px) {
+    nav .logo-container {
+        display: flex;
+    }
+
+    nav #toggle-navigation {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav li.link {
+        display: none;
+    }
+
+    nav li.link.active {
+        display: block;
+    }
+}
+
 /*
     Header
 */
@@ -130,13 +157,14 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
     place-items: center;
     width: 100%;
 }
 
-.footer-content .social-media-container > img {
+.footer-content .social-media-container > a {
     margin: 1em;
+    text-decoration: none;
 }
 
 .footer-content .footer-link-container {
@@ -153,6 +181,17 @@ footer {
     width: 100%;
     text-align: center;
     margin-top: 3em;
+}
+
+@media screen and (max-width: 799px) {
+    .footer-content {
+        grid-template-columns: auto;
+        row-gap: 1em;
+    }
+
+    .footer-content .social-media-container > a {
+        margin: 0;
+    }
 }
 
 /*
@@ -177,7 +216,7 @@ footer {
 .recipe-preview-content {
     padding: 1em;
     display: grid;
-    grid-template-rows: 10% 20% auto 5%;
+    grid-template-rows: 10% 20% auto 10%;
 }
 
 .recipe-preview img {
@@ -213,7 +252,7 @@ footer {
 */
 .recipe {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 35% auto;
     text-align: left;
     column-gap: 1em;
 }
@@ -244,8 +283,12 @@ button {
     transition: transform 0.2s ease-in-out;
 }
 
-button:hover {
+button.grow-on-hover:hover {
     transform: scale(1.05);
+}
+
+button:focus {
+    border: 2px solid blue;
 }
 
 .logo-icon {
@@ -257,4 +300,26 @@ button:hover {
 .inline-logo-container {
     display: flex;
     align-items: center;
+}
+
+/*
+    Shareable Link
+*/
+#shareable-link-popup {
+    position: fixed;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    border-radius: 5px;
+}
+
+#uneditable-link-input {
+    padding: 1em;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+}
+
+#close-dialog {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }

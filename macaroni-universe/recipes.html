@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<HTML>
+<HTML lang="en">
     <head>
         <!--
             Metadata
@@ -15,7 +15,8 @@
         -->
         <link rel="icon" type="image/png" href="images/logo-no-background.png">
         <link rel="stylesheet" href="main.css" />
-        <script src="main.js" type="module"></script>
+        <script src="page-recipes.mjs" type="module"></script>
+        <script src="navigation.mjs" type="module"></script>
     </head>
 
     <body>
@@ -24,9 +25,11 @@
         -->
         <nav>
             <ul>
-                <li>
-                    <img src="images/logo-no-background.png" class="logo-icon"> 
-                    Macaroni Universe
+                <li class="logo-container">
+                    <img src="images/logo-no-background.png" class="logo-icon" 
+                        alt="Macaroni Universe Logo"> 
+                    <span>Macaroni Universe</span>
+                    <button id="toggle-navigation">=</button>
                 </li>
                 <li class="link"><a href="index.html">Home</a></li>
                 <li class="link"><a href="recipes.html">Recipes</a></li>
@@ -38,10 +41,22 @@
         -->
         <header>
             <div class="header-content">
-                <img src="images/logo-no-background.png">
+                <img src="images/logo-no-background.png" alt="Macaroni Universe Logo">
                 <h1>Macaroni Universe</h1>
             </div>
         </header>
+
+        <!--
+            Copy Shareable Link Popup
+        -->
+        <dialog id="shareable-link-popup">
+            <h2>Share Recipe</h2>
+            <p>Share a link to this recipe:</p>
+            <input type="text" id="uneditable-link-input" readonly>
+            <button id="copy-link-button">Copy</button>
+            <p id="shareable-link-output"></p>
+            <button id="close-dialog">X</button>
+        </dialog>
 
         <!--
             Recipes
@@ -54,7 +69,8 @@
         <footer>
             <div class="footer-content">
                 <span class="inline-logo-container">
-                    <img src="images/logo-no-background.png" class="logo-icon"> 
+                    <img src="images/logo-no-background.png" class="logo-icon" 
+                        alt="Macaroni Universe Logo"> 
                     Macaroni Universe
                 </span>
                 <div class="footer-link-container">
@@ -62,9 +78,15 @@
                     <a href="recipes.html">Recipes</a>
                 </div>
                 <div class="social-media-container">
-                    <img src="images/icon-instagram.png">
-                    <img src="images/icon-facebook.png">
-                    <img src="images/icon-x.png">
+                    <a href="https://www.instagram.com" target=”_blank”>
+                        <img src="images/icon-instagram.png" alt="Instagram Icon">
+                    </a>
+                    <a href="https://www.facebook.com" target=”_blank”>
+                        <img src="images/icon-facebook.png" alt="Facebook Icon">
+                    </a>
+                    <a href="https://www.x.com" target=”_blank”>
+                        <img src="images/icon-x.png" alt="X Icon">
+                    </a>
                 </div>
             </div>
             <span class="copyright-notice">&copy; 2025 Silas Carlson. All Rights Reserved.</span>

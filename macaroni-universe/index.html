@@ -1,5 +1,30 @@
+<!--
+    Project Requirements
+
+    1. The personal site must consist of a home page and at least one child page.
+    2. The website must be hosted on the web.
+    3. Each page of your Web site must satisfy the following requirements:
+        1. Significant textual content, appropriate for your audience, so that they can understand 
+            the meaning and message of this site.
+        2. At least one image that relates to the content of the page.
+        3. Working links to your child page(s).
+        4. Be laid out and styled according to your site plan wireframes.
+        5. Be responsive
+        6. Be visually appealing and easily readable.
+        7. Be valid HTML and CSS
+        8. Score at least 96 on Lighthouse on Accessibility.
+    4. The site should have dynamic elements provided by Javascript, your code should show elements 
+        of the following:
+        1. It should show some level of organization: at a minimum it should have more than one 
+            function.
+        2. It should include DOM interaction: select an element, modify it, and listen for and 
+            react to events
+        3. It should show examples of conditional branching
+    4. Each of the following should be used: Objects, Arrays and array method usage (forEach, map, 
+        reduce, filter, etc)
+-->
 <!DOCTYPE HTML>
-<HTML>
+<HTML lang="en">
     <head>
         <!--
             Metadata
@@ -15,7 +40,8 @@
         -->
         <link rel="icon" type="image/png" href="images/logo-no-background.png">
         <link rel="stylesheet" href="main.css" />
-        <script src="index.js" type="module"></script>
+        <script src="page-index.mjs" type="module"></script>
+        <script src="navigation.mjs" type="module"></script>
     </head>
 
     <body>
@@ -24,9 +50,11 @@
         -->
         <nav>
             <ul>
-                <li>
-                    <img src="images/logo-no-background.png" class="logo-icon"> 
-                    Macaroni Universe
+                <li class="logo-container">
+                    <img src="images/logo-no-background.png" class="logo-icon" 
+                        alt="Macaroni Universe Logo"> 
+                    <span>Macaroni Universe</span>
+                    <button id="toggle-navigation">=</button>
                 </li>
                 <li class="link"><a href="index.html">Home</a></li>
                 <li class="link"><a href="recipes.html">Recipes</a></li>
@@ -38,11 +66,14 @@
         -->
         <header class="hero">
             <div class="header-content">
-                <img src="images/logo-no-background.png">
+                <img src="images/logo-no-background.png" alt="Macaroni Universe Logo">
                 <h1>Macaroni Universe</h1>
             </div>
         </header>
 
+        <!--
+            Main Content
+        -->
         <main>
             <!--
                 Our Mission
@@ -55,7 +86,9 @@
                     Cheese is considered by many to be divine. We affirm this statement and will 
                     provide the best macaroni and cheese recipes humanely possible to you at your
                     fingertips 24 hours, 365 days in the year.</p>
-                <button id="#our-mission-call-to-action">Check out our recipes!</button>
+                <button class="grow-on-hover" id="our-mission-call-to-action">
+                    Check out our recipes!
+                </button>
             </section>
 
             <!--
@@ -66,7 +99,6 @@
                 <p>Take a look at our most popular recipes, which have been tested to only be the
                     best recipes known to humankind! Become the next sensation at your family 
                     gatherings, and go down in Macaroni and Cheese History.</p>
-                
                 <div class="recipe-preview-container"></div>
             </section>
         </main>
@@ -77,7 +109,8 @@
         <footer>
             <div class="footer-content">
                 <span class="inline-logo-container">
-                    <img src="images/logo-no-background.png" class="logo-icon"> 
+                    <img src="images/logo-no-background.png" class="logo-icon" 
+                        alt="Macaroni Universe Logo"> 
                     Macaroni Universe
                 </span>
                 <div class="footer-link-container">
@@ -85,9 +118,15 @@
                     <a href="recipes.html">Recipes</a>
                 </div>
                 <div class="social-media-container">
-                    <img src="images/icon-instagram.png">
-                    <img src="images/icon-facebook.png">
-                    <img src="images/icon-x.png">
+                    <a href="https://www.instagram.com" target=”_blank”>
+                        <img src="images/icon-instagram.png" alt="Instagram Icon">
+                    </a>
+                    <a href="https://www.facebook.com" target=”_blank”>
+                        <img src="images/icon-facebook.png" alt="Facebook Icon">
+                    </a>
+                    <a href="https://www.x.com" target=”_blank”>
+                        <img src="images/icon-x.png" alt="X Icon">
+                    </a>
                 </div>
             </div>
             <span class="copyright-notice">&copy; 2025 Silas Carlson. All Rights Reserved.</span>
