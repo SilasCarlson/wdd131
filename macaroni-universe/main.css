@@ -1,0 +1,260 @@
+:root {
+    /* colors */
+    --primary-color: #f6ba3d;
+	--secondary-color: #DB581B;
+	--accent1-color: #F6EDDC;
+	--accent2-color: #31150F;
+
+    /* fonts */
+    --heading-font: 'Trebuchet MS', Tahoma, Geneva, sans-serif;
+	--paragraph-font: 'Verdana', Geneva, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+/*
+    Navigation
+*/
+nav {
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    color: var(--accent1-color);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+nav li a {
+    color: var(--accent1-color);
+    text-decoration: none;
+}
+
+nav li.link {
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav li.link:hover {
+    background-color: var(--primary-color);
+}
+
+/*
+    Header
+*/
+header.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/mac-and-cheese-header.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* paralax effect */
+    min-height: 95vh;
+    max-width: 100%;
+}
+
+header > .header-content {
+    text-align: center;
+    background-color: rgba(246, 237, 222, 0.85);
+    padding: 25px;
+    border-radius: 1em;
+    color: var(--secondary-color);
+}
+
+header > .header-content img {
+    width: 15em;
+}
+
+header > .header-content h1 {
+    letter-spacing: 0.25em;
+}
+
+/*
+    Main & Section
+*/
+main {
+    margin: 0;
+}
+
+section.our-mission {
+    text-align: center;
+    width: 50%;
+}
+
+section.featured-recipes > p {
+    width: 66%;
+    margin: 0 auto 2% auto;
+}
+
+section {
+    text-align: center;
+    width: 75%;
+    margin: 5% auto;
+}
+
+section h2 {
+    font-size: 3em;
+}
+
+/*
+    Footer
+*/
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    font-family: var(--paragraph-font);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    place-items: center;
+    width: 100%;
+}
+
+.footer-content .social-media-container > img {
+    margin: 1em;
+}
+
+.footer-content .footer-link-container {
+    display: flex;
+    gap: 2em;
+}
+
+.footer-content .footer-link-container a {
+    text-decoration: none;
+    color: var(--accent1-color);
+}
+
+.copyright-notice {
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+}
+
+/*
+    Recipe Preview Container
+*/
+
+.recipe-preview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2em;
+    row-gap: 2em;
+}
+
+.recipe-preview {
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 50% auto;
+}
+
+.recipe-preview-content {
+    padding: 1em;
+    display: grid;
+    grid-template-rows: 10% 20% auto 5%;
+}
+
+.recipe-preview img {
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1549px) {
+    .recipe-preview-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 899px) {
+    .recipe-preview-container {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-preview {
+        grid-template-rows: 30% auto;
+    }
+
+    .recipe-preview-content {
+        grid-template-rows: auto;
+    }
+}
+
+/*
+    Recipe
+*/
+.recipe {
+    display: grid;
+    grid-template-columns: 30% auto;
+    text-align: left;
+    column-gap: 1em;
+}
+
+.recipe > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 999px) {
+    .recipe {
+        grid-template-columns: auto;
+    }
+}
+
+/*
+    Misc
+*/
+button {
+    padding: 1em;
+    border: 2px solid var(--accent1-color);
+    border-radius: 5px;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    font-family: var(--paragraph-font);
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    height: 32px;
+    width: auto;
+    margin-right: 0.5em;
+}
+
+.inline-logo-container {
+    display: flex;
+    align-items: center;
+}

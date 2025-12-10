@@ -24,18 +24,21 @@
         -->
         <nav>
             <ul>
-                <li>Macaroni Universe</li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
+                <li>
+                    <img src="images/logo-no-background.png" class="logo-icon"> 
+                    Macaroni Universe
+                </li>
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="recipes.html">Recipes</a></li>
             </ul>
         </nav>
         
         <!--
             Header
         -->
-        <header>
-            <div class="content">
-                <img src="images/logo.png">
+        <header class="hero">
+            <div class="header-content">
+                <img src="images/logo-no-background.png">
                 <h1>Macaroni Universe</h1>
             </div>
         </header>
@@ -44,7 +47,7 @@
             <!--
                 Our Mission
             -->
-            <section>
+            <section class="our-mission">
                 <h2>Our Mission</h2>
                 <p>Our mission is to provide the best quality macaroni and cheese recipes for you 
                     and for your friends. Whatever type of macaroni and cheese you are desiring, we 
@@ -52,47 +55,19 @@
                     Cheese is considered by many to be divine. We affirm this statement and will 
                     provide the best macaroni and cheese recipes humanely possible to you at your
                     fingertips 24 hours, 365 days in the year.</p>
-                <button>Check out our recipes!</button>
+                <button id="#our-mission-call-to-action">Check out our recipes!</button>
             </section>
 
             <!--
                 Featured Recipes
             -->
-            <section>
+            <section class="featured-recipes">
                 <h2>Featured Recipes</h2>
                 <p>Take a look at our most popular recipes, which have been tested to only be the
                     best recipes known to humankind! Become the next sensation at your family 
                     gatherings, and go down in Macaroni and Cheese History.</p>
-
-                <article>
-                    <img src="images/baked-macaroni-and-cheese.webp">
-                    <p>Category</p>
-                    <h3>Recipe #1</h3>
-                    <p>This recipe incorporates an instant pot to make the most divinly inspired 
-                        macaroni and cheese. Here is also some more information about this recipe 
-                        and this is just to make the content look longer for testing purposes.</p>
-                    <a href="recipes.html">Read more</a>
-                </article>
-
-                <article>
-                    <img src="images/creamy-baked-mac-and-cheese.webp">
-                    <p>Category</p>
-                    <h3>Recipe #1</h3>
-                    <p>This recipe incorporates an instant pot to make the most divinly inspired 
-                        macaroni and cheese. Here is also some more information about this recipe 
-                        and this is just to make the content look longer for testing purposes.</p>
-                    <a href="recipes.html">Read more</a>
-                </article>
-
-                <article>
-                    <img src="images/instant-pot-mac-and-cheese.jpg">
-                    <p>Category</p>
-                    <h3>Recipe #1</h3>
-                    <p>This recipe incorporates an instant pot to make the most divinly inspired 
-                        macaroni and cheese. Here is also some more information about this recipe 
-                        and this is just to make the content look longer for testing purposes.</p>
-                    <a href="recipes.html">Read more</a>
-                </article>
+                
+                <div class="recipe-preview-container"></div>
             </section>
         </main>
 
@@ -100,17 +75,22 @@
             Footer
         -->
         <footer>
-            <span>Macaroni Universe</span>
-            <div class="link-container">
-                <a href="index.html">Home</a>
-                <a href="recipes.html">Recipes</a>
+            <div class="footer-content">
+                <span class="inline-logo-container">
+                    <img src="images/logo-no-background.png" class="logo-icon"> 
+                    Macaroni Universe
+                </span>
+                <div class="footer-link-container">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                </div>
+                <div class="social-media-container">
+                    <img src="images/icon-instagram.png">
+                    <img src="images/icon-facebook.png">
+                    <img src="images/icon-x.png">
+                </div>
             </div>
-            <div class="social-media-container">
-                <img src="images/icon-instagram.png">
-                <img src="images/icon-facebook.png">
-                <img src="images/icon-x.png">
-            </div>
-            <span>&copy; 2025 Silas Carlson. All Rights Reserved.</span>
+            <span class="copyright-notice">&copy; 2025 Silas Carlson. All Rights Reserved.</span>
         </footer>
     </body>
 </HTML>

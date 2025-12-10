@@ -24,9 +24,12 @@
         -->
         <nav>
             <ul>
-                <li>Macaroni Universe</li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
+                <li>
+                    <img src="images/logo-no-background.png" class="logo-icon"> 
+                    Macaroni Universe
+                </li>
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="recipes.html">Recipes</a></li>
             </ul>
         </nav>
 
@@ -34,40 +37,37 @@
             Header
         -->
         <header>
-            <img src="images/logo-no-background.png">
-            <h1>Macaroni Universe</h1>
+            <div class="header-content">
+                <img src="images/logo-no-background.png">
+                <h1>Macaroni Universe</h1>
+            </div>
         </header>
 
         <!--
             Recipes
         -->
-        <section class="recipe">
-            <img src="images/baked-macaroni-and-cheese.webp">
-            <div class="recipe-content">
-                <h2>Recipe name</h2>
-                <p>★★★☆☆</p>
-                <p>Review here</p>
-                <p>Ingredients</p>
-                <p>Directions</p>
-            </div>
-            <button>Share!</button>
-        </section>
+        <main class="recipe-container"></main>
 
         <!--
             Footer
         -->
         <footer>
-            <span>Macaroni Universe</span>
-            <div class="link-container">
-                <a href="index.html">Home</a>
-                <a href="recipes.html">Recipes</a>
+            <div class="footer-content">
+                <span class="inline-logo-container">
+                    <img src="images/logo-no-background.png" class="logo-icon"> 
+                    Macaroni Universe
+                </span>
+                <div class="footer-link-container">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                </div>
+                <div class="social-media-container">
+                    <img src="images/icon-instagram.png">
+                    <img src="images/icon-facebook.png">
+                    <img src="images/icon-x.png">
+                </div>
             </div>
-            <div class="social-media-container">
-                <img src="images/icon-instagram.png">
-                <img src="images/icon-facebook.png">
-                <img src="images/icon-x.png">
-            </div>
-            <span>&copy; 2025 Silas Carlson. All Rights Reserved.</span>
+            <span class="copyright-notice">&copy; 2025 Silas Carlson. All Rights Reserved.</span>
         </footer>
     </body>
 </HTML>
