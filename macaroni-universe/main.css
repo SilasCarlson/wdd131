@@ -2,6 +2,7 @@
     /* colors */
     --primary-color: #f6ba3d;
 	--secondary-color: #DB581B;
+    --accent1-color: #f6eddc;
 	--accent2-color: #31150F;
 
     /* fonts */
@@ -100,11 +101,21 @@ header.hero {
 }
 
 header > .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    padding: 3em;
+}
+
+header.hero > .header-content {
     text-align: center;
     background-color: rgba(246, 237, 222, 0.85);
     padding: 25px;
     border-radius: 1em;
     color: var(--secondary-color);
+    display: block;
 }
 
 header > .header-content img {
@@ -113,6 +124,13 @@ header > .header-content img {
 
 header > .header-content h1 {
     letter-spacing: 0.25em;
+}
+
+@media screen and (max-width: 499px) {
+    header > .header-content {
+        display: block;
+        text-align: center;
+    }
 }
 
 /*
@@ -287,7 +305,7 @@ button.grow-on-hover:hover {
 }
 
 button:focus {
-    border: 2px solid blue;
+    border: 3px solid blue;
 }
 
 .logo-icon {
